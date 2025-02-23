@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.Activity_Total_Revenue">
+
+    <ImageView
+        android:layout_marginTop="5dp"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_gravity="center"
+        android:src="@drawable/owl" />
+
+    <TextView
+        android:id="@+id/title"
+        android:textColor="#37B2EC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowRadius="5"
+        android:shadowColor="#C6C6C6"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:text="Thống kê doanh thu"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:layout_marginEnd="2dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <AutoCompleteTextView
+            android:layout_gravity="center"
+            android:id="@+id/year"
+            android:padding="0dp"
+            android:hint="Năm"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:inputType="none"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/chart"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/detailBtn"
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            android:text="Chi tiết"
+            app:backgroundTint="@null"
+            android:background="@drawable/rectangular_button"
+            android:textColor="#F3EDED"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="5dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:textSize="17dp"/>
+
+        <Button
+            android:id="@+id/printBtn"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            android:text="Xuất file"
+            app:backgroundTint="@null"
+            android:background="@drawable/rectangular_button"
+            android:textColor="#F3EDED"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="10dp"
+            android:textSize="17dp"/>
+
+        <ImageButton
+            android:id="@+id/return_to_frag_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@drawable/rectangular_button"
+            android:layout_marginEnd="5dp"
+            android:contentDescription="Cài đặt"
+            android:src="@drawable/baseline_arrow_back_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
